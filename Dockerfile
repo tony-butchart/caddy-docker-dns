@@ -5,7 +5,7 @@ RUN xcaddy build \
     --with github.com/caddy-dns/cloudflare \
     --with github.com/tony-butchart/caddy-auto-windns
 
-FROM caddy:latest
+FROM caddy:alpine
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
 
